@@ -263,10 +263,12 @@ $('#create-user').click(function(event) {
 
 $('#update-user').click(function(event) {
   event.preventDefault();
-  userdb.users[userdb.currentUser].name = $("#name").val();
-  userdb.users[userdb.currentUser].aboutMe = $("#aboutMe").val();
-  userdb.users[userdb.currentUser].location = $("#location").val();
+  let user = userdb.users[userdb.currentUser];
+  user.name = $("#name").val();
+  user.aboutMe = $("#aboutMe").val();
+  user.location = $("#location").val();
   addLoginDetails();
+  addRecipeFields(user);
   $('#new-user-overall-container').hide();
   $('#user-profile-overall-container').show();
 });
