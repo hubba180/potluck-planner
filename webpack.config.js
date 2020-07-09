@@ -19,13 +19,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'index',
+      title: 'index.html',
       template: './src/index.html',
       inject: 'body'
-    }),
-    new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'landing-dashboard.html',
-      template: './src/landing-dashboard.html'
     })
   ],
   module: {
@@ -45,6 +41,18 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts'
             }
           }
         ]
