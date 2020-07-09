@@ -1,11 +1,11 @@
-
+import
 h2, h3, h4, input, button, a, p, label, div{
   font-family: 'lora';
 }
 
 h1 {
   font-weight: 700;
-  font-size: 4.5em;
+  font-size: 4.6em;
   margin: 0;
   font-family: 'recoleta';
 }
@@ -106,7 +106,15 @@ input {
 }
 
 #white-space{
-  width: 45%;
+  width: 40%;
+}
+
+#header-flex-container a {
+  margin: .5em;
+}
+
+#header-flex-container a:hover {
+  opacity: 50%;
 }
 
 /* new user */
