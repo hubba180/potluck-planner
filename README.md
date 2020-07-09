@@ -71,10 +71,10 @@ This program will allow users to:
 ## Setup/Installation Requirements
 
 #### Requirements
-* _GitBash or a preferred computer terminal_
-* _node.js (visit: https://nodejs.org/en/ for instructions on downloading)
-* _Web browser_
-* _Optional: code editor - suggested VSCode-_
+* GitBash or a preferred computer terminal
+* node.js (visit: https://nodejs.org/en/ for instructions on downloading)
+* Web browser
+* Optional: code editor - VSCode is suggested
 
 #### Install
 1.  Navigate to my github repository at: https://github.com/potluck-planner_
@@ -88,7 +88,9 @@ This program will allow users to:
 6.  Use the command ```$ npm run start``` to view the program
 
 ## Known Bugs
-_No known bugs_
+* Modify and Delete functionality for Events is not currently available
+* Modify and Delete functionality for Recipes is not currently available
+* Error handling for incomplete form entry does not function correctly
 
 ## Support and contact details
 _Kyle Hubbard:_
