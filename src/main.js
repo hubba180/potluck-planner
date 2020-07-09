@@ -134,8 +134,9 @@ $("#user-profile-events-list").on("click", "li", function(event){
     <p>Description: ${userEvent.desc}</p><br>
     <p>Location: ${userEvent.location}</p><br>
     <p>Date: ${userEvent.dateTime}</p>
-    <button id='${userEvent.id},prof'>modify</button>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhubba180.github.io%2Fpotluck-planner%2F&layout=button&size=large&appId=728634131036318&width=78&height=28" width="78" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     `);
+    
 });
 
 $("#user-profile-recipe-list").on("click", "li", function(event){
@@ -151,7 +152,6 @@ $("#user-profile-recipe-list").on("click", "li", function(event){
     <p>Time to Cook: ${userRecipe.timeToCook}</p><br>
     <p>Ingredients: ${userRecipe.ingredients}</p><br>
     <p>Instructions: ${userRecipe.instructions}</p><br>
-    <button id='${userRecipe.id}-btn'>modify</button>
     `);
 });
 
@@ -316,8 +316,7 @@ $("#all-events-list").on("click", "li", function(event){
     <p>Description: ${userEvent.desc}</p><br>
     <p>Location: ${userEvent.location}</p><br>
     <p>Date: ${userEvent.dateTime}</p>
-    <button id='${idSplit(rawID).join(',')}'>modify</button>
-    <div class="fb-share-button" data-href="https://github.com/hubba180/potluck-planner" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Fhubba180%2Fpotluck-planner&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhubba180.github.io%2Fpotluck-planner%2F&layout=button&size=large&appId=728634131036318&width=78&height=28" width="78" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     `);
 });
 
@@ -331,8 +330,7 @@ $("#your-events-list").on("click", "li", function(event){
     <p>Description: ${userEvent.desc}</p><br>
     <p>Location: ${userEvent.location}</p><br>
     <p>Date: ${userEvent.dateTime}</p>
-    <button id='${userEvent.id}'>modify</button>
-    <div class="fb-share-button" data-href="https://github.com/hubba180/potluck-planner" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Fhubba180%2Fpotluck-planner&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fhubba180.github.io%2Fpotluck-planner%2F&layout=button&size=large&appId=728634131036318&width=78&height=28" width="78" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     `);
 });
 
@@ -346,17 +344,17 @@ function idSplit(id){
   }
 }
 
-$("#all-events-list li button").on("click", function(event){
-  event.preventDefault();
-  let rawID = $(this).attr('id');
-  let userID = idSplit(rawID)[0];
-  let eventID = idSplit(rawID)[1];
-  let eventToModify = userdb.users[userID].events[eventID];
-  $("#eventDate").val(eventToModify.dateTime);
-  $("#eventName").val(eventToModify.eventName);
-  $("#eventLocation").val(eventToModify.location);
-  $("#eventDesc").val(eventToModify.desc);
-  $("#eventID").text(eventID);
-  $("#landing-dashboard-overall-container").hide();
-  $("#add-event-page").show();
-});
+// $("#all-events-list li button").on("click", function(event){
+//   event.preventDefault();
+//   let rawID = $(this).attr('id');
+//   let userID = idSplit(rawID)[0];
+//   let eventID = idSplit(rawID)[1];
+//   let eventToModify = userdb.users[userID].events[eventID];
+//   $("#eventDate").val(eventToModify.dateTime);
+//   $("#eventName").val(eventToModify.eventName);
+//   $("#eventLocation").val(eventToModify.location);
+//   $("#eventDesc").val(eventToModify.desc);
+//   $("#eventID").text(eventID);
+//   $("#landing-dashboard-overall-container").hide();
+//   $("#add-event-page").show();
+// });
